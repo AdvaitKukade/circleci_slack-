@@ -5,8 +5,9 @@ jobs:
   build:
     docker:
       - image: ubuntu:18.04
+    working_directory: /root/  
     steps:
-     #- run: apt-get update && apt install bash && apk add curl
+      - run: apt update && apt install bash && apk add curl
       - slack/notify: 
           channel: Advait Kukade
           color: '#42e2f4' 
