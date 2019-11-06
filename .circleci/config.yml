@@ -4,14 +4,12 @@ orbs:
 jobs:
   build:
     docker:
-      - image: ubuntu
+      - image: ubuntu:18.04
     steps:
-     #- run: apt-get update #&& apt install bash && apk add curl
-      - run: 
+     #- run: apt-get update && apt install bash && apk add curl
       - slack/notify: 
           channel: Advait Kukade
           color: '#42e2f4' 
           mentions: 'advaitkukade@gmail.com' 
           message: This is a custom message notification
           webhook: https://hooks.slack.com/services/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
-      
