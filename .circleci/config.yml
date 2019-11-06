@@ -6,9 +6,9 @@ jobs:
     docker:
       - image: alpine
     steps:
-      - run: apk update & apk add bash 
+      - run: apk update && apk add bash 
       - slack/status:
-          fail_only: true 
+          fail_only: false
           mentions: 'advaitkukade@gmail.com' 
           only_for_branches: master
           webhook: https://hooks.slack.com/services/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
