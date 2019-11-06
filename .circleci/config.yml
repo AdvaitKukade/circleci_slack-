@@ -7,8 +7,8 @@ jobs:
       - image: alpine
     steps:
       - run: apk update && apk add bash 
-      - slack/notify: |
-          color: '#42e2f4'
+      - slack/status:
+          fail_only: true 
           mentions: 'advaitkukade@gmail.com' 
-          message: This is a custom message notification.
+          only_for_branches: master
           webhook: https://hooks.slack.com/services/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
