@@ -8,7 +8,6 @@ jobs:
     steps:
       - run: apk update && apk add bash && apk add curl
       - slack/notify: 
-          author_link: xoxp-809217259922-824213926678-825453044263-fd83e8d01c3c9733f064f47328a7e945
           channel: Advait Kukade
           color: '#42e2f4' 
           mentions: 'advaitkukade@gmail.com' 
