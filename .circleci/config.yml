@@ -7,8 +7,7 @@ jobs:
       - image: alpine
     steps:
       - run: apk update && apk add bash && apk add curl
-      - slack/notify:
-          channel: Advait Kukade 
+      - slack/notify: 
           color: '#42e2f4' 
           mentions: 'advaitkukade@gmail.com' 
           message: This is a custom message notification
