@@ -4,17 +4,14 @@ orbs:
 jobs:
   build:
     docker:
-      - image: alpine
+      - image: ubuntu
     steps:
-      - run: apk update && apk add bash && apk add curl
+     #- run: apt-get update #&& apt install bash && apk add curl
+      - run: 
       - slack/notify: 
           channel: Advait Kukade
           color: '#42e2f4' 
           mentions: 'advaitkukade@gmail.com' 
           message: This is a custom message notification
-          webhook: https://hooks.slack.com/services/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
-      - run: 
-          name: Notify Slack.
-          command: curl https://hooks.slack.com/services/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 
-         #command: curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' https://hooks.slack.com/services/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 
-     #- run: curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' https://hooks.slack.com/services/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
+          webhook: https://hooks.slack.com/services/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
+      
