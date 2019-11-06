@@ -7,7 +7,7 @@ jobs:
       - image: ubuntu:18.04
     working_directory: /root/  
     steps:
-      - run: apt update && apt install bash && apt install curl
+      - run: apt update && apt install -y bash && apt install -y curl
       - slack/notify: 
           channel: Advait Kukade
           color: '#42e2f4' 
