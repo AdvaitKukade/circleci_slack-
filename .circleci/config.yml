@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  slack: circleci/slack@1.0.0
+  slack: circleci/slack@3.4.1
 workflows:
   slack_workflow:
     jobs:
@@ -9,3 +9,4 @@ workflows:
           mentions: 'advaitkukade@gmail.com' 
           message: This is a custom message notification.
           webhook: https://hooks.slack.com/services/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  
+      - run: apk update && apk add bash
