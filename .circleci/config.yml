@@ -15,5 +15,6 @@ jobs:
           webhook: https://hooks.slack.com/services/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
       - run: 
           name: Notify Slack.
-          command: curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' https://hooks.slack.com/services/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 
+          command: curl -X POST -H --data '{"text":"Hello, World!"}' https://hooks.slack.com/services/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 
+         #command: curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' https://hooks.slack.com/services/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 
      #- run: curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' https://hooks.slack.com/services/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
