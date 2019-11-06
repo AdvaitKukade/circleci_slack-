@@ -1,12 +1,25 @@
 version: 2.1
 orbs:
   slack: circleci/slack@3.4.1
+jobs:
+  job_1:
+    docker:
+      - image: alpine:3.5
+    steps:
+      - checkout
+      - run:
+          name: Installing Bash
+          command: apk update && apk add bash
+      - run:
+          name: Executing P.A slack Notificaton.
+          command: 
+            - slack/approval-notification:
+                color: '#42e2f4'
+                mentions: 'advaitkukade@gmail.com' 
+                message: This is a custom message notification.
+                webhook: https://hooks.slack.com/services/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  
+     
 workflows:
   slack_workflow:
     jobs:
-      - slack/approval-notification:
-          color: '#42e2f4'
-          mentions: 'advaitkukade@gmail.com' 
-          message: This is a custom message notification.
-          webhook: https://hooks.slack.com/services/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  
-      - run: apk update && apk add bash
+      - job_1 
