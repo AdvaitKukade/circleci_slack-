@@ -4,10 +4,9 @@ orbs:
 jobs:
   build:
     docker:
-      - image: ubuntu
+      - image: alpine
     steps:
-     #- run: apk update && apk add bash 
-      - run: sudo apt-get update && sudo apt install curl
+      - run: apk update && apk add bash && apk add curl
       - slack/notify:
           color: '#42e2f4' 
           mentions: 'advaitkukade@gmail.com' 
