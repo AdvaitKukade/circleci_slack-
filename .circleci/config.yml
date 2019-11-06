@@ -12,5 +12,5 @@ jobs:
           color: '#42e2f4' 
           mentions: 'advaitkukade@gmail.com' 
           message: This is a custom message notification
-          webhook: https://hooks.slack.com/services/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
+          webhook: https://hooks.slack.com/services/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
      #- run: curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' https://hooks.slack.com/services/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
