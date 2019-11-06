@@ -8,8 +8,9 @@ jobs:
     steps:
       - run: apk update && apk add bash && apk add curl
       - slack/notify: 
+          channel: Advait Kukade
           color: '#42e2f4' 
           mentions: 'advaitkukade@gmail.com' 
           message: This is a custom message notification
-          webhook: https://hooks.slack.com/services/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
+          webhook: https://hooks.slack.com/services/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
      #- run: curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' https://hooks.slack.com/services/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
