@@ -8,6 +8,7 @@ jobs:
     steps:
       - run: apk update && apk add bash && apk add curl
       - slack/notify:
+          channel: circleci
           color: '#42e2f4' 
           mentions: 'advaitkukade@gmail.com' 
           message: This is a custom message notification.
