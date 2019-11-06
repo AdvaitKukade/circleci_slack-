@@ -6,7 +6,7 @@ jobs:
     docker:
       - image: alpine
     steps:
-      - run: apk update && apk add -y bash && apk add -y curl
+      - run: apk update && apk add bash && apk add curl
       - slack/notify:
           channel: circleci
           color: '#42e2f4' 
