@@ -1,0 +1,18 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: alpine:3.5
+    steps:
+      - slack/approval-notification:
+          color: '#42e2f4'
+          mentions: 'advaitkukade@gmail.com' 
+          message: This particular action needs your approval.
+          webhook: https://hooks.slack.com/services/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
+orbs:
+  slack: circleci/slack@1.0.0
+version:
+workflows:
+  slack_workflow:
+    jobs:
+      - build
