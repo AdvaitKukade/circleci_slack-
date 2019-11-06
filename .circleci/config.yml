@@ -3,6 +3,8 @@ orbs:
   slack: circleci/slack@3.4.1
 jobs:
   job_1:
+    docker:
+      - image: alpine:3.5
     steps:
       - run: exit 0
       - run: apk update && apk add bash 
