@@ -4,11 +4,11 @@ orbs:
 jobs:
   build:
     docker:
-      - image: alpine
+      - image: ubuntu
     steps:
-      - run: apk update && apk add bash 
-      - slack/status:
-          fail_only: false
+     #- run: apk update && apk add bash 
+      - slack/notify:
+          color: '#42e2f4' 
           mentions: 'advaitkukade@gmail.com' 
-          only_for_branches: master
+          message: This is a custom message notification.
           webhook: https://hooks.slack.com/services/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
