@@ -12,5 +12,5 @@ jobs:
        # message: 'This is a custom message notification.'
           only_for_branches: master 
           webhook: https://hooks.slack.com/services/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
-orb:
+orbs:
   slack: circleci/slack@3.4.1
