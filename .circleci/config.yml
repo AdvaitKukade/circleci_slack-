@@ -6,11 +6,11 @@ jobs:
     working_directory: /root/
     steps:
       - run: apt update && apt install -y bash && apt install -y curl
-      - slack/approval-notification:
-      #   fail_only: true
+      - slack/status:
+       #   fail_only: true
        #  mentions: 'advaitkukade@gmail.com' 
-          message: 'Pending Approval.'
-       #   only_for_branches: master 
+       #   message: 'Pending Approval.'
+          only_for_branches: master 
           webhook: https://hooks.slack.com/services/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
 orbs:
   slack: circleci/slack@3.4.1
