@@ -11,6 +11,8 @@ jobs:
        #  mentions: 'advaitkukade@gmail.com' 
        #   message: 'Pending Approval.'
           only_for_branches: master 
-          webhooks: https://hooks.slack.com/services/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
+          webhooks: |
+            https://hooks.slack.com/services/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
+            
 #orbs:
 #  slack: circleci/slack@1.0.0
